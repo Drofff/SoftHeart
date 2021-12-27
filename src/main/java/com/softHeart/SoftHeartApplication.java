@@ -13,7 +13,7 @@ public class SoftHeartApplication {
         try {
             telegramBotsApi.registerBot(new SoftHeartBot());
         } catch(TelegramApiRequestException e) {
-            System.out.println("Error during bot registration");
+            System.out.println("Error registering the bot:" + e.getMessage());
             e.printStackTrace();
         }
     }
